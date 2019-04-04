@@ -14,16 +14,44 @@
 # य - y र - r ल - l व - v
 # श - sh ष - sh स - s ह - h
 
-Initials = [
-    "Namaste. Aap kaise hai",
-    "Kya chal raha hai?",
-    "Kya aapko koi pareshaani hai"
+initials = [
+    "namaste. aap kaise hai",
+    "kya chal raha hai?",
+    "kya aapko koi pareshaani hai"
 ]
 
-Quits = [
-  "Bye"
+quits = [
+  "bye",
+  "alvidaa"
 ]
 
-Synons = {
+synons = {
     "parivaar" : ["maa","maataa","pitaa","bhaai","bahan"]
 }
+
+# Keywords
+# Array of
+#   ["<key>", <rank>, [
+#     ["<decomp>", [
+#       "<reasmb>",
+#       "<reasmb>",
+#       "<reasmb>"
+#     ]],
+#     ["<decomp>", [
+#       "<reasmb>",
+#       "<reasmb>",
+#       "<reasmb>"
+#     ]]
+#   ]]
+
+keywords = [
+    ["xnone",0,[
+        ["*",[
+            "mujhe samajh nahi aayaa",
+            "aur bataaiye",
+            "yah dilachasp hai. krpaya jaari rakhe",
+            "yah aapako kya sujhaav deta hai?",
+        ]]
+    ]]
+]
+
