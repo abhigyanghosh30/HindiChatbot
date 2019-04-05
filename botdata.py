@@ -4,7 +4,7 @@
 
 # Transliteration Index
 # अ - a आ - aa इ - i ई - i
-# उ - u ऊ - u ए - e ऐ - ai 
+# उ - u ऊ - oo ए - e ऐ - ai 
 # ओ - o औ - au 
 # क - k ख - kh ग - g घ - gh 
 # च - ch छ - ch ज - j झ - jh 
@@ -51,6 +51,20 @@ keywords = [
             "aur bataaiye",
             "yah dilachasp hai. krpaya jaari rakhe",
             "yah aapako kya sujhaav deta hai?",
+        ]]
+    ]],
+    ["yaad",1,[
+        ["* yaad rakhnaa * 1 meraa 1 se 1 tak *",[
+            "def schedule(3,4,5)"
+        ]],
+        ["* yaad rakhnaa * meraa 1 1 se 1 tak *",[
+            "def schedule(3,4,5)"
+        ]],
+        ["* yaad dilaanaa * meraa 1 1 se 1 tak *",[
+            "def schedule(3,4,5)"
+        ]],
+        ["* yaad dilaanaa * 1 meraa 1 se 1 tak *",[
+            "def schedule(3,4,5)"
         ]]
     ]]
 ]
