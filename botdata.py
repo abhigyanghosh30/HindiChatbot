@@ -54,17 +54,17 @@ keywords = [
         ]]
     ]],
     ["yaad",1,[
-        ["* yaad rakhnaa * 1 meraa 1 se 1 tak *",[
-            "def schedule(3,4,5)"
+        ["^.* yaad rakhnaa .* (.+)* meraa (.+)* se (.+)* tak .*",[
+            "def schedule(1,2,3)"
         ]],
-        ["* yaad rakhnaa * meraa 1 1 se 1 tak *",[
-            "def schedule(3,4,5)"
+        ["^.* yaad rakhnaa .* meraa (.+)* se (.+)* tak .*",[
+            "def schedule(1,2,3)"
         ]],
-        ["* yaad dilaanaa * meraa 1 1 se 1 tak *",[
-            "def schedule(3,4,5)"
+        ["^.* yaad dilaanaa .* meraa (.+)* (.+)* se (.+)* tak .*",[
+            "def schedule(1,2,3)"
         ]],
-        ["* yaad dilaanaa * 1 meraa 1 se 1 tak *",[
-            "def schedule(3,4,5)"
+        ["^.* yaad dilaanaa .* (.+)* meraa (.+)* se (.+)* tak .*",[
+            "def schedule(1,2,3)"
         ]]
     ]]
 ]
