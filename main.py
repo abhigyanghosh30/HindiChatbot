@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 import botdata
+import random
 import datetime
 from sqlalchemy import create_engine, Column, String, DateTime, Integer
 from sqlalchemy.ext.declarative import declarative_base
@@ -29,4 +30,4 @@ def process_input(sentence):
     pass
 
 if __name__ == "__main__":
-    print(botdata.initials[random%3])
+    print(random.choice(botdata.initials))

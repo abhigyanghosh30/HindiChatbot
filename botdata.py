@@ -66,6 +66,11 @@ keywords = [
         ["^.* yaad dilaanaa .* (.+)* meraa (.+)* se (.+)* tak .*",[
             "def schedule(1,2,3)"
         ]]
+    ]],
+    ["naam",15,[
+        [".*",[
+            "naam mein kya rakha hai? aago batao"
+        ]]
     ]]
 ]
 
