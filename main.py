@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-import botdata
+import botdata  as bd
 import random
 import datetime
 from sqlalchemy import create_engine, Column, String, DateTime, Integer
@@ -30,4 +30,18 @@ def process_input(sentence):
     pass
 
 if __name__ == "__main__":
-    print(random.choice(botdata.initials))
+    print(random.choice(bd.initials))
+    while True:
+        input_text = input(">: ")
+
+        keyword = ""        # keyword 
+        precedence = 0      # precendence
+        key_position = -1   # position of the keyword in the keywords
+
+        for i in range(0,len(bd.keywords)):
+            if bd.keywords[i][0] in input_text and bd.keywords[i][1] > precedence:
+                precedence = bd.keywords[i][1]
+                keyword = bd.keywords[i][0]
+                key_position = i
+              
+            
