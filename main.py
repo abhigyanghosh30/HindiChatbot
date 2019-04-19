@@ -28,24 +28,31 @@ def schedule(date, start_time, end_time):
     pass
 
 def process_input(sentence):
-    pass
+    precedence = 0      # precendence
+    key_position = -1   # position of the keyword in the keywords
+
+    # find the keywords and take the keyword with the maximum precedence value
+    for i in range(0,len(bd.keywords)):
+        if bd.keywords[i][0] in sentence and bd.keywords[i][1] > precedence:
+            precedence = bd.keywords[i][1]
+            key_position = i
+
+    for i in range(0,len(bd.keywords[key_position][2])):
+        pattern = bd.keywords[key_position][2][i][0]
+        split_sentence = re.split(pattern,sentence)
+        split_sentence = [ elem for elem in split_sentence if elem != "" ]
+        if len(split_sentence) > 1:
+            print(pattern)
+            print(split_sentence)
+
 
 if __name__ == "__main__":
     print(random.choice(bd.initials))
     while True:
         input_text = input(">: ")
+        process_input(input_text)
 
-        keyword = ""        # keyword 
-        precedence = 0      # precendence
-        key_position = -1   # position of the keyword in the keywords
+        
 
-        for i in range(0,len(bd.keywords)):
-            if bd.keywords[i][0] in input_text and bd.keywords[i][1] > precedence:
-                precedence = bd.keywords[i][1]
-                keyword = bd.keywords[i][0]
-                key_position = i
 
-        for i in range(0,len(bd.keywords[key_position][2])):
-            pattern = bd.keywords[key_position][2][0]
-            print(re.split(pattern,input_text))
             

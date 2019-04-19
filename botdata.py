@@ -8,6 +8,10 @@ initials = [
     "kya aapko koi pareshaani hai"
 ]
 
+elizaFinals = [
+    "bye. aapse mil ke khushi hui"
+]
+
 quits = [
   "bye",
   "alvidaa"
@@ -53,12 +57,30 @@ keywords = [
         ]],
         ["^.* yaad dilaanaa .* (.+)* meraa (.+)* se (.+)* tak .*",[
             "def schedule(1,2,3)"
-        ]]
+        ]],
+        ["^.* yaad rakhnaa .* (.+)* meraa (.+)* se (.+)* .*",[
+            "def schedule(1,2,3)"
+        ]],
+        ["^.* yaad rakhnaa .* meraa (.+)* se (.+)* .*",[
+            "def schedule(1,2,3)"
+        ]],
+        ["^.* yaad dilaanaa .* meraa (.+)* (.+)* se (.+)* .*",[
+            "def schedule(1,2,3)"
+        ]],
+        ["^.* yaad dilaanaa .* (.+)* meraa (.+)* se (.+)* .*",[
+            "def schedule(1,2,3)"
+        ]],
     ]],
     ["naam",15,[
-        [".*",[
+        ["(.+)* naam (.+)* hai",[
+            "hello {1}"
+        ]],
+        ["(.+)* naam kya hai?",[
+            ""
+        ]],
+        ["(.+)",[
             "naam mein kya rakha hai? aago batao"
-        ]]
+        ]],
     ]],
     ["baat",12,[
         ["",[
