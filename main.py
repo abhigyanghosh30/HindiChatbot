@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 import botdata  as bd
+import re
 import random
 import datetime
 from sqlalchemy import create_engine, Column, String, DateTime, Integer
@@ -43,5 +44,8 @@ if __name__ == "__main__":
                 precedence = bd.keywords[i][1]
                 keyword = bd.keywords[i][0]
                 key_position = i
-              
+
+        for i in range(0,len(bd.keywords[key_position][2])):
+            pattern = bd.keywords[key_position][2][0]
+            print(re.split(pattern,input_text))
             
