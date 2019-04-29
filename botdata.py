@@ -73,7 +73,7 @@ keywords = [
     ]],
     ["naam",15,[
         ["(.+)* naam (.+)* hai",[
-            "hello {1}"
+            "hello s[1]"
         ]],
         ["(.+)* naam kya hai?",[
             ""
