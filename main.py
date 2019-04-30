@@ -42,8 +42,12 @@ def process_input(sentence):
         split_sentence = re.split(pattern,sentence)
         split_sentence = [ elem for elem in split_sentence if elem != "" ]
         if len(split_sentence) > 1:
+            # the pattern matches
+            transformations = bd.keywords[key_position][2][i][1]
+            print(random.choice(transformations).format(s=split_sentence))
             print(pattern)
             print(split_sentence)
+            
 
 
 if __name__ == "__main__":
