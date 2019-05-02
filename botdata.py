@@ -5,7 +5,8 @@
 initials = [
     "namaste. aap kaise hai",
     "kya chal raha hai?",
-    "kya aapko koi pareshaani hai"
+    "kya aapko koi pareshaani hai?",
+    "mai aapki kaise madad kar sakta hoon?"
 ]
 
 elizaFinals = [
@@ -17,9 +18,9 @@ quits = [
   "alvidaa"
 ]
 
-synons = {
-    "parivaar" : ["maa","maataa","pitaa","bhaai","bahan"]
-}
+# synons = {
+#     "parivaar" : ["maa","maataa","pitaa","bhaai","bahan"]
+# }
 
 # Keywords
 # Array of
@@ -38,37 +39,37 @@ synons = {
 
 keywords = [
     ["xnone",0,[
-        ["*",[
+        ["^.*",[
             "mujhe samajh nahi aayaa",
             "aur bataaiye",
-            "yah dilachasp hai. krpaya jaari rakhe",
+            "yah toh badi dilachasp baat hai",
             "yah aapako kya sujhaav deta hai?",
         ]]
     ]],
     ["yaad",1,[
-        ["^.* yaad rakhnaa .* (.+)* meraa (.+)* se (.+)* tak .*",[
-            "def schedule(1,2,3)"
+        ["^.* yaad rakhnaa .* (.+)* meraa (.+)* se (.+)* tak (.+)* .*",[
+            "def schedule()"
         ]],
-        ["^.* yaad rakhnaa .* meraa (.+)* se (.+)* tak .*",[
-            "def schedule(1,2,3)"
+        ["^.* yaad rakhnaa .* meraa (.+)* se (.+)* tak (.+)* .*",[
+            "def schedule()"
         ]],
-        ["^.* yaad dilaanaa .* meraa (.+)* (.+)* se (.+)* tak .*",[
-            "def schedule(1,2,3)"
+        ["^.* yaad dilaanaa .* meraa (.+)* (.+)* se (.+)* tak (.+)* .*",[
+            "def schedule()"
         ]],
-        ["^.* yaad dilaanaa .* (.+)* meraa (.+)* se (.+)* tak .*",[
-            "def schedule(1,2,3)"
+        ["^.* yaad dilaanaa .* (.+)* meraa (.+)* se (.+)* tak (.+)* .*",[
+            "def schedule()"
         ]],
-        ["^.* yaad rakhnaa .* (.+)* meraa (.+)* se (.+)* .*",[
-            "def schedule(1,2,3)"
+        ["^.* yaad rakhnaa .* (.+)* meraa (.+)* se (.+)* (.+)* .*",[
+            "def schedule()"
         ]],
-        ["^.* yaad rakhnaa .* meraa (.+)* se (.+)* .*",[
-            "def schedule(1,2,3)"
+        ["^.* yaad rakhnaa .* meraa (.+)* se (.+)* (.+)* .*",[
+            "def schedule()"
         ]],
-        ["^.* yaad dilaanaa .* meraa (.+)* (.+)* se (.+)* .*",[
-            "def schedule(1,2,3)"
+        ["^.* yaad dilaanaa .* meraa (.+)* (.+)* se (.+)* (.+)* .*",[
+            "def schedule()"
         ]],
-        ["^.* yaad dilaanaa .* (.+)* meraa (.+)* se (.+)* .*",[
-            "def schedule(1,2,3)"
+        ["^.* yaad dilaanaa .* (.+)* meraa (.+)* se (.+)* (.+)* .*",[
+            "def schedule()"
         ]],
     ]],
     ["naam",15,[
