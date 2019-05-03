@@ -2,7 +2,10 @@
 import botdata  as bd
 import re
 import random
+
 import datetime
+import requests
+
 from sqlalchemy import create_engine, Column, String, DateTime, Integer
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
@@ -48,6 +51,10 @@ def process_input(sentence):
             precedence = bd.keywords[i][1]
             key_position = i
 
+    if key_position == 0:
+        print(random.choice(bd.keywords[0][2][0][1]))
+        return
+
     for i in range(0,len(bd.keywords[key_position][2])):
         pattern = bd.keywords[key_position][2][i][0]
         if re.search(pattern,sentence):
@@ -60,8 +67,9 @@ def process_input(sentence):
                     schedule(split_sentence[0], split_sentence[1],split_sentence[2],split_sentence[3])
                     return
                 print(random.choice(transformations).format(s=split_sentence))
-                print(pattern)
-                print(split_sentence)
+                # print(pattern)
+                # print(split_sentence)
+            return
             
 
 

@@ -41,9 +41,6 @@ keywords = [
     ["xnone",0,[
         ["^.*",[
             "mujhe samajh nahi aayaa",
-            "aur bataaiye",
-            "yah toh badi dilachasp baat hai",
-            "yah aapako kya sujhaav deta hai?",
         ]]
     ]],
     ["yaad",1,[
@@ -73,15 +70,15 @@ keywords = [
         ]],
     ]],
     ["naam",15,[
+        ["(.+)* naam kyaa hai?",[
+            "mera koi naam nahi hai"
+        ]],
         ["(.+)* naam (.+)* hai",[
             "hello {s[1]}",
             "ok so?"
         ]],
-        ["(.+)* naam kya hai?",[
-            ""
-        ]],
-        ["(.+)",[
-            "naam mein kya rakha hai? aago batao"
+        ["(.+) (.+)*",[
+            "naam mein kyaa rakha hai? aago batao"
         ]],
     ]],
     ["baat",12,[
