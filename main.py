@@ -17,8 +17,8 @@ class Appointment(Base):
 
     id = Column(Integer, primary_key=True)
     date = Column(DateTime,default=datetime.date.today())
-    start_time = Column(DateTime)
-    end_time = Column(DateTime)
+    start_time = Column(String(10))
+    end_time = Column(String(10))
     name = Column(String(100))
 
 
@@ -32,10 +32,6 @@ def schedule(date, start_time, end_time, event):
         date = datetime.date.today() + datetime.timedelta(days=1)
     if date == "aaj":
         date = datetime.date.today()
-    if start_time.isdigit:
-        start_time = datetime.time(int(start_time),0,0)
-    if end_time.isdigit:
-        end_time = datetime.time(int(end_time),0,0)
 
     new_appointment = Appointment(date=date, start_time=start_time, end_time=end_time, name=event)
     session.add(new_appointment)
