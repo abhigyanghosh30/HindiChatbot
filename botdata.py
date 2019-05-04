@@ -43,7 +43,7 @@ keywords = [
             "mujhe samajh nahi aayaa",
         ]]
     ]],
-    ["yaad",1,[
+    ["yaad",6,[
         ["^.* yaad rakhnaa .* (.+)* meraa (.+)* se (.+)* tak (.+)* .*",[
             "def schedule()"
         ]],
@@ -69,22 +69,42 @@ keywords = [
             "def schedule()"
         ]],
     ]],
-    ["naam",15,[
+    ["naam",4,[
         ["(.+)* naam kyaa hai?",[
-            "mera koi naam nahi hai"
+            "meraa koi naam nahi hai"
         ]],
         ["(.+)* naam (.+)* hai",[
             "hello {s[1]}",
             "ok so?"
         ]],
         ["(.+) (.+)*",[
-            "naam mein kyaa rakha hai? aago batao"
+            "naam mein kyaa rakhaa hai? aago batao"
         ]],
     ]],
-    ["baat",12,[
-        ["",[
-            ""
+    ["mujhe",2,[
+        ["^mujhe (.+)* kyaa karnaa hai",[
+            "def readout()"
+        ]],
+        ["^mujhe (.+)* kyaa kyaa karnaa hai",[
+            "def readout()"
+        ]],
+    ]],
+    ["meraa", 1,[
+        ["meraa (.+)*",[
+            "accha? aapka {s[0]}"
+        ]],
+    ]],
+    ["schedule",5,[
+        ["^.* (.+)* ka schedule .*",[
+            "def readout()"
         ]]
+    ]],
+    ["kyaa",2,[
+        ["kyaa aapko (.+)*",[
+            "mujhe {s[0]}"
+        ]],
     ]]
+
+
 ]
 
