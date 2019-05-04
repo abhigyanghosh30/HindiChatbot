@@ -99,9 +99,12 @@ def process_input(sentence):
 
 if __name__ == "__main__":
     print(random.choice(bd.initials))
-    while True:
-        input_text = input(">: ")
-        process_input(input_text)
+    try:
+        while True:
+            input_text = input(">: ")
+            process_input(input_text)
+    except EOFError:
+        print(random.choice(bd.quits))
 
         
 
