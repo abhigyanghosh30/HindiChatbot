@@ -103,6 +103,15 @@ keywords = [
         ["kyaa aapko (.+)*",[
             "mujhe {s[0]}"
         ]],
+        ["aapko kyaa (.+)*",[
+            "mujhe {s[0]}"
+        ]],
+        ["kyaa tumhe (.+)*",[
+            "mujhe {s[0]}"
+        ]],
+        ["tumhe kyaa (.+)*",[
+            "mujhe {s[0]}"
+        ]],
     ]]
 
 
